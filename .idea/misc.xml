@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/android_develop/MiniApp/app/src/main/res/drawable/circle_yellow.xml" value="0.1" />
         <entry key="..\:/android_develop/MiniApp/app/src/main/res/layout/activity_bmi.xml" value="0.1" />
+        <entry key="..\:/android_develop/MiniApp/app/src/main/res/layout/activity_lottery.xml" value="0.16573033707865167" />
         <entry key="..\:/android_develop/MiniApp/app/src/main/res/layout/activity_main.xml" value="0.1707193515704154" />
         <entry key="..\:/android_develop/MiniApp/app/src/main/res/layout/activity_result.xml" value="0.1778115501519757" />
       </map>

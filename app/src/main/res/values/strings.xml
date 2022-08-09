@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MiniApp</string>
+    <string name="btn1">번호 추가하기</string>
+
 </resources>

@@ -23,6 +23,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, BMI_Activity::class.java)
             startActivity(intent)
         }
+        button2.setOnClickListener {
+            val intent = Intent(this, Lottery_Activity::class.java)
+            startActivity(intent)
+        }
 
     }
 }
