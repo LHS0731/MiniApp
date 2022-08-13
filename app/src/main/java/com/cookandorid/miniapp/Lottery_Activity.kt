@@ -3,6 +3,7 @@ package com.cookandorid.miniapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 
 class Lottery_Activity : AppCompatActivity() {
@@ -54,6 +55,8 @@ class Lottery_Activity : AppCompatActivity() {
                 val textView = numberTextViewList[index]
                 textView.text = number.toString()
                 textView.isVisible = true
+
+                setNumberBackground(number, textView)
             }
         }
     }
@@ -75,7 +78,20 @@ class Lottery_Activity : AppCompatActivity() {
             val textView = numberTextViewList[pickNumberSet.size]
             textView.isVisible = true
             textView.text=numberPicker.value.toString()
+
+            setNumberBackground(numberPicker.value, textView)
+
             pickNumberSet.add(numberPicker.value)
+        }
+    }
+
+    private fun setNumberBackground(number:Int, textView: TextView){
+        when(number){
+            in 1..10 -> textView.background = ContextCompat.getDrawable(this, R.drawable.circle_yellow)
+            in 11..20 -> textView.background = ContextCompat.getDrawable(this, R.drawable.circle_blue)
+            in 21..30 -> textView.background = ContextCompat.getDrawable(this, R.drawable.circle_red)
+            in 31..40 -> textView.background = ContextCompat.getDrawable(this, R.drawable.circle_grey)
+            else -> textView.background = ContextCompat.getDrawable(this, R.drawable.circle_green)
         }
     }
     private fun initClearButton(){

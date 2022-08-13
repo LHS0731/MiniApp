@@ -51,6 +51,9 @@
             android:layout_margin="5dp"
             tools:visibility="visible"
             android:visibility="gone"
+            android:background="@drawable/circle_blue"
+            android:gravity="center"
+            android:textColor="@color/white"
             android:text="1" />
         <TextView
             android:id="@+id/num2"
@@ -61,6 +64,9 @@
             android:layout_margin="5dp"
             tools:visibility="visible"
             android:visibility="gone"
+            android:background="@drawable/circle_yellow"
+            android:gravity="center"
+            android:textColor="@color/white"
             android:text="1"/>
         <TextView
             android:id="@+id/num3"
@@ -71,6 +77,9 @@
             android:layout_margin="5dp"
             tools:visibility="visible"
             android:visibility="gone"
+            android:background="@drawable/circle_red"
+            android:gravity="center"
+            android:textColor="@color/white"
             android:text="1"/>
         <TextView
             android:id="@+id/num4"
@@ -81,6 +90,9 @@
             android:layout_margin="5dp"
             tools:visibility="visible"
             android:visibility="gone"
+            android:background="@drawable/circle_grey"
+            android:gravity="center"
+            android:textColor="@color/white"
             android:text="1"/>
         <TextView
             android:id="@+id/num5"
@@ -91,6 +103,9 @@
             android:layout_margin="5dp"
             tools:visibility="visible"
             android:visibility="gone"
+            android:background="@drawable/circle_grey"
+            android:gravity="center"
+            android:textColor="@color/white"
             android:text="1"/>
         <TextView
             android:id="@+id/num6"
@@ -101,6 +116,9 @@
             android:layout_margin="5dp"
             tools:visibility="visible"
             android:visibility="gone"
+            android:background="@drawable/circle_grey"
+            android:gravity="center"
+            android:textColor="@color/white"
             android:text="1"/>
 
     </LinearLayout>
