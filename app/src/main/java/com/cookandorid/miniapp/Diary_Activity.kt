@@ -57,8 +57,10 @@ class Diary_Activity : AppCompatActivity() {
                 Toast.makeText(this, "비밀번호 변경 중입니다", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+
             val passwordPreferences = getSharedPreferences("password", Context.MODE_PRIVATE)
             val passwordFromUser = "${numberPicker1.value}${numberPicker2.value}${numberPicker3.value}"
+
             if (passwordPreferences.getString("password", "000").equals(passwordFromUser)) {
                 //login success
                 startActivity(Intent(this, DiaryPage_Activity::class.java))
@@ -66,31 +68,30 @@ class Diary_Activity : AppCompatActivity() {
                 //login fail
                 showErrorDialog()
             }
+        }
+        changeButton.setOnClickListener{
 
-            changeButton.setOnClickListener{
+            val passwordPreferences = getSharedPreferences("password", Context.MODE_PRIVATE)
+            val passwordFromUser = "${numberPicker1.value}${numberPicker2.value}${numberPicker3.value}"
 
-                val passwordPreferences = getSharedPreferences("password", Context.MODE_PRIVATE)
-                val passwordFromUser = "${numberPicker1.value}${numberPicker2.value}${numberPicker3.value}"
-
-                if(mode){
-                    //new password save
-                    passwordPreferences.edit(true){
-                        putString("password",passwordFromUser)
-                    }
-
-                    mode = false
-                    changeButton.setBackgroundColor(Color.parseColor("#D4A373"))
+            if(mode){
+                //new password save
+                passwordPreferences.edit(true){
+                    putString("password",passwordFromUser)
                 }
-                else{
-                    //password reset
-                    if (passwordPreferences.getString("password", "000").equals(passwordFromUser)) {
-                        mode = true
-                        Toast.makeText(this, "변경할 패스워드를 입력해주세요", Toast.LENGTH_SHORT).show()
-                        changeButton.setBackgroundColor(Color.RED)
-                    } else {
-                        //login fail
-                        showErrorDialog()
-                    }
+
+                mode = false
+                changeButton.setBackgroundColor(Color.parseColor("#D4A373"))
+            }
+            else{
+                //password reset
+                if (passwordPreferences.getString("password", "000").equals(passwordFromUser)) {
+                    mode = true
+                    Toast.makeText(this, "변경할 패스워드를 입력해주세요", Toast.LENGTH_SHORT).show()
+                    changeButton.setBackgroundColor(Color.RED)
+                } else {
+                    //login fail
+                    showErrorDialog()
                 }
             }
         }

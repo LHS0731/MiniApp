@@ -31,6 +31,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Diary_Activity::class.java)
             startActivity(intent)
         }
+        button4.setOnClickListener {
+            val intent = Intent(this, Cal_Activity::class.java)
+            startActivity(intent)
+        }
 
     }
 }

@@ -15,6 +15,6 @@
     </style>
 
     <style name="Theme.MiniApp.NoActionBar" parent ="Theme.MaterialComponents.DayNight.NoActionBar">
-
+        //액션바가 없는 테마를 새로 만들어준다
     </style>
 </resources>

@@ -10,13 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MiniApp">
         <activity
+            android:name=".Cal_Activity"
+            android:exported="false" />
+        <activity
             android:name=".DiaryPage_Activity"
             android:exported="false"
-            android:theme="@style/Theme.MiniApp.NoActionBar"/>
+            android:theme="@style/Theme.MiniApp.NoActionBar" />
         <activity
             android:name=".Diary_Activity"
             android:exported="false"
-            android:theme="@style/Theme.MiniApp.NoActionBar"/>
+            android:theme="@style/Theme.MiniApp.NoActionBar" />
         <activity
             android:name=".Lottery_Activity"
             android:exported="false" />
